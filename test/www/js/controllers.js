@@ -13,7 +13,6 @@ angular.module('appCtrl', [])
 .controller('homeCtrl', function($scope, $cordovaGeolocation, $ionicLoading, $ionicPlatform) {
     $scope.map = { center: { latitude: 37.7911103, longitude: -122.40211139999997 }, zoom: 15 };
     $scope.maker = {};
-    $scope.options = {url: '//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
 
     $ionicPlatform.ready(function() {    
 
@@ -50,7 +49,7 @@ angular.module('appCtrl', [])
             $scope.RequestRideButton = function(){
                 $scope.maker.latitude = position.coords.latitude;
                 $scope.maker.longitude = position.coords.longitude;
-                $scope.options = {url: '//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'}
+                $scope.options = {url: 'img/banana-icon.png', scaledSize: new google.maps.Size(30, 30), animation: google.maps.Animation.BOUNCE}
             }
 
 
