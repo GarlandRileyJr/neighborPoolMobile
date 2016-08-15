@@ -1,8 +1,9 @@
-<ion-view view-title="Home" name="home-view">
+ <ion-view view-title="Home" name="home-view">
   <ion-content class="padding">
-    <div id="map"></div>>
+    <div id="map"></div>
     <ui-gmap-google-map center='map.center' zoom='map.zoom' maker=>
         <ui-gmap-marker  coords="maker" icon='options' idkey="1"></ui-gmap-marker> 
       </ui-gmap-google-map>
+      <button class="button button-block button-balanced" ng-click="RequestRideButton()">Request A Ride</button>
   </ion-content>
 </ion-view>
