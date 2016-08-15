@@ -9,6 +9,12 @@ angular.module('appCtrl', [])
     }
 })
 
+.controller('signupCtrl', function($scope, $location){
+  $scope.data = {};
+  $scope.signup= function(data){  
+    $location.path('/home')
+  }
+})
 
 .controller('homeCtrl', function($scope, $cordovaGeolocation, $ionicLoading, $ionicPlatform) {
     $scope.map = { center: { latitude: 37.7911103, longitude: -122.40211139999997 }, zoom: 15 };

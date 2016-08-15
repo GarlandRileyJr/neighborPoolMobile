@@ -28,7 +28,8 @@ angular.module('starter', ['ionic', 'appCtrl', 'uiGmapgoogle-maps', 'ngCordova']
   })
   .state('signup', {
     url: '/signup',
-    templateUrl: 'js/templates/signup.html'
+    templateUrl: 'js/templates/signup.html',
+    controller: 'signupCtrl'
   })
   .state('home', {
     url: '/home',
