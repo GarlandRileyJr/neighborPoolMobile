@@ -39,7 +39,7 @@ angular.module('appCtrl', [])
             var myLatlng = new google.maps.LatLng($scope.map.center.latitude, $scope.map.center.longitude);
             var mapOptions = {
                 center: myLatlng,
-                zoom: 16,
+                zoom: 17,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };          
 
