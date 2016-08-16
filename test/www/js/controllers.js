@@ -52,10 +52,21 @@ angular.module('appCtrl', [])
             $ionicLoading.hide(); 
 
 
+                $scope.goCats = false
             $scope.RequestRideButton = function(){
-                $scope.maker.latitude = position.coords.latitude;
-                $scope.maker.longitude = position.coords.longitude;
-                $scope.options = {url: 'img/banana-icon.png', scaledSize: new google.maps.Size(30, 30), animation: google.maps.Animation.BOUNCE}
+                console.log($scope.goCats)
+                if(!$scope.goCats){
+                     $scope.maker.latitude = position.coords.latitude;
+                    $scope.maker.longitude = position.coords.longitude;
+                    $scope.options = {url: 'img/banana-icon.png', scaledSize: new google.maps.Size(40, 40)}
+
+                }else{
+
+                    // $scope.options = {url: 'img/jordan.jpg', scaledSize: new google.maps.Size(40, 40)}
+                        $scope.maker.latitude = null;
+                        $scope.maker.longitude = null;
+                        console.log("Testing");
+                }
             }
 
 
