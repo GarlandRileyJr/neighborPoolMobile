@@ -4,8 +4,14 @@
         <ui-gmap-marker  coords="maker" icon='options' idkey="1"></ui-gmap-marker> 
       </ui-gmap-google-map>
   </ion-content>
-  <div class="bar bar-footer bar-calm" ng-click="RequestRideButton()">
-        <div class="title">Request A Ride</div>
+  <div ng-click="goCats = !goCats" >
+    <div ng-show="goCats == false" class= "bar bar-footer bar-calm"  ng-click="RequestRideButton()">
+          <div class="title">Request A Ride</div>
+    </div>
+
+    <div ng-show="goCats == true" class= "bar bar-footer bar-assertive"  ng-click="RequestRideButton()">
+      <div class="title">Cancel Ride</div>
+    </div>
   </div>
 </ion-view>
 
